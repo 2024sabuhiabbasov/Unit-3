@@ -6,35 +6,35 @@
 ```.py
 # Program for Quiz 034
 
-def to_roman(num: int) -> str:
-    answer = ''
-    while num - 100 >= 0:
-        answer += 'C'
-        num -= 100
-    if num > 100:
-        raise ValueError("Input number must be less than or equal to 100")
-    while num - 50 >= 0:
-        answer += 'L'
-        num -= 50
-    while num - 10 >= 0:
-        answer += 'X'
-        num -= 10
-    while num - 5 >= 0:
-        answer += 'V'
-        num -= 5
-    while num - 1 >= 0:
-        answer += 'I'
-        num -= 1
-    if "IIII" in answer:
-         answer = answer.replace("IIII", "IV")
-    if "VIV" in answer:
-        answer = answer.replace("VIV", "IX")
-    if "XXXX" in answer:
-        answer = answer.replace("XXXX", "XL")
-    if "LXL" in answer:
-        answer = answer.replace("LXL", "XC")
-    return answer
-print(to_roman(100))
+class quiz34:
+    def __init__(self, num: int):
+        self.num = num
+
+    def solve(self) -> str:
+        number = self.num
+        if number > 100:
+            raise ValueError("Input number must be less than or equal to 100")
+        answer = ''
+        num = [1, 4, 5, 9, 10, 40, 50, 90,
+               100]
+        rom = ["I", "IV", "V", "IX", "X", "XL",
+               "L", "XC", "C"]
+        cnt = 8
+
+        while number:
+            div = number // num[cnt]
+            number %= num[cnt]
+
+            while div:
+                answer += rom[cnt]
+                div -= 1
+            cnt -= 1
+        return answer
+
+
+case1 = quiz34(num=59)
+solution = case1.solve()
+print(solution)
 ```
 ### Proof
 ![image](https://user-images.githubusercontent.com/111758436/212216787-d43bad09-1f59-4987-97a8-016ef66295cb.png)
