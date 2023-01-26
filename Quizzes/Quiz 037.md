@@ -35,3 +35,4 @@ class AccountingProgram():
 ```
 ### Proof
 There is an error in test code.
+![image](https://user-images.githubusercontent.com/111758436/214815331-e17a3fe9-c866-4fff-bfd9-b4195d96609f.png)
