@@ -37,4 +37,4 @@ solution = case1.solve()
 print(solution)
 ```
 ### Proof
-![image](https://user-images.githubusercontent.com/111758436/212216787-d43bad09-1f59-4987-97a8-016ef66295cb.png)
+![image](https://user-images.githubusercontent.com/111758436/214751104-65c8b514-eec4-4934-a7c5-be162b33ef79.png)
