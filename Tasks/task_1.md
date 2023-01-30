@@ -111,3 +111,102 @@ Screen:
 ## Proofs
 ![image](https://user-images.githubusercontent.com/111758436/215521616-4d4fe961-b3b5-489a-ab91-f74ff5b14007.png)
 ![image](https://user-images.githubusercontent.com/111758436/215521678-e19b7b71-b4c2-4e8a-8496-0e47a9232ebe.png)
+
+# Task 2
+![image](https://user-images.githubusercontent.com/111758436/215522335-39c08a33-66c8-41e7-b43d-997bf2f3e520.png)
+
+### My code
+
+**Python code**
+
+```.py
+from kivymd.app import MDApp
+
+
+class bit_byte_converter(MDApp):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.input = 0
+        self.exchanged_result = 0
+
+    def build(self):
+        return
+
+    def set_input(self):
+        # validation for integer
+        if not self.root.ids.output.text.isdigit():
+            self.root.ids.show_converted_amount.text = "Please enter a valid number"
+        number = int(self.root.ids.input.text)
+        self.input = number
+
+    def byte_to_bit(self):
+        self.exchanged_result = self.input * 8
+        self.root.ids.output.text = f"{'{:,}'.format(self.exchanged_result)} bits"
+
+    def bit_to_byte(self):
+        self.exchanged_result = self.input / 8
+        self.root.ids.output.text = f"{'{:,}'.format(self.exchanged_result)} bytes"
+
+
+converter = bit_byte_converter()
+converter.run()
+```
+
+**KV**
+```.kv
+Screen:
+    size: 500,500
+    MDBoxLayout:
+        id: main
+        orientation: 'vertical'
+        size_hint:.8,.8
+        pos_hint: {'center_x': .5, 'center_y': .5}
+
+        MDLabel:
+            text: 'Bit/Byte Converter'
+            halign: 'center'
+            font_style: 'H3'
+            size_hint: 1, .3
+            pos_hint: {'center_x': .5, 'center_y': .5}
+
+        MDTextField:
+            id: input
+            hint_text: 'Input Bits/Bytes to convert'
+            size_hint: 1, .2
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            on_text: app.set_input()
+
+        MDBoxLayout:
+            id: buttons
+            orientation: "horizontal"
+            size_hint: 1, .3
+            pos_hint: {'center_x': .5, 'center_y': .5}
+
+            MDRectangleFlatButton:
+                id: bit_to_byte
+                text: 'Convert Bits to Bytes'
+                size_hint: .3, .5
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                md_bg_color: "#2D3142"
+                on_release: app.bit_to_byte()
+            MDRectangleFlatButton:
+                id: byte_to_bit
+                text: 'Convert Bytes to Bits'
+                size_hint: .3, .5
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                md_bg_color: "#2D3142"
+                on_release: app.byte_to_bit()
+
+
+        MDLabel:
+            id: output
+            text: '0'
+            font_style: 'H4'
+            halign: 'center'
+            size_hint: 1, .3
+            pos_hint: {'center_x': .5, 'center_y': .5}
+```
+
+## Proof
+![image](https://user-images.githubusercontent.com/111758436/215524091-025b812f-861a-4605-af68-366de2913364.png)
+![image](https://user-images.githubusercontent.com/111758436/215524162-b52087b2-63d5-4a4c-8173-cf914bb2d20e.png)
