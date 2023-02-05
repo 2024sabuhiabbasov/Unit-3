@@ -42,3 +42,6 @@ class AccountingProgram:
 ```
 ### Proof
 ![image](https://user-images.githubusercontent.com/111758436/216808838-04dffd99-b470-4936-8d91-6c15ae2cb4a2.png)
+
+## UML Diagram
+![image](https://user-images.githubusercontent.com/111758436/216810863-b0d1a054-656e-4512-afec-cd51e6e1a77d.png)
