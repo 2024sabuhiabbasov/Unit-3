@@ -31,6 +31,7 @@ class theming(MDApp):
             self.root.ids.theme_mode.text_color = 0, 0, 0, 1
             self.root.ids.my_name.text_color = 0, 0, 0, 1
             self.root.ids.theme_mode.text = "DARK"
+            self.root.ids.theme_mode.md_bg_color = "#658864"
 
 
 quiz40 = theming()
@@ -61,5 +62,5 @@ Screen:
             on_release: app.change_mode()
 ```
 ### Proof
-![image](https://user-images.githubusercontent.com/111758436/216807615-0bbf46cf-2050-4ded-ab42-62c362401693.png)
-![image](https://user-images.githubusercontent.com/111758436/216807616-d877719d-efbd-40f8-bdfe-13eb983d48ef.png)
+![image](https://user-images.githubusercontent.com/111758436/216807664-8aa3978e-b6a9-4eae-9b59-3bf98f1967de.png)
+![image](https://user-images.githubusercontent.com/111758436/216807669-66aaf755-dc94-4438-b574-ac8881015ed1.png)
