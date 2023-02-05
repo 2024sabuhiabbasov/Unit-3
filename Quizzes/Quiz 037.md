@@ -7,32 +7,38 @@
 # Program for Quiz 037
 
 class CompoundInterest:
-    def __init__(self, principal, rate, no_of_years):
+    def __init__(self, principal: int, rate: float, year: int):
         self.principal = principal
         self.rate = rate
-        self.no_of_years = no_of_years
+        self.year = year
 
-    def calculate(self):
-        return self.principal*(1+self.rate)**self.no_of_years
 
-class AccountingProgram():
-
+class AccountingProgram:
     def __init__(self):
-        self.data = CompoundInterest(principal=0, rate=0, no_of_years=0)
+        self.compound = CompoundInterest(0, 0, 0)
 
     def set_principal(self, principal):
-        self.data.principal = principal
+        if principal <= 0:
+            raise ValueError("Principal should be greater than zero")
+        self.compound.principal = principal
+        return f"Principal set to {self.compound.principal}"
 
     def set_rate(self, rate):
-        self.data.rate = rate
+        if rate <= 0:
+            raise ValueError("Interest rate should be greater than zero")
+        self.compound.rate = rate
+        return f"Rate set to {self.compound.rate}"
 
-    def set_years(self, years):
-        self.data.years = years
+    def set_years(self, year):
+        if year <= 0:
+            raise ValueError("Years should be greater than zero")
+        self.compound.year = year
+        return f"Year set to {self.compound.year}"
 
     def calculate_interest(self):
-        answer = self.data.calculate()
-        return answer
+        temp = self.compound.principal * (1 + self.compound.rate) ** self.compound.year
+        format_float = "{:.2f}".format(temp)
+        return float(format_float)
 ```
 ### Proof
-There is an error in test code.
-![image](https://user-images.githubusercontent.com/111758436/214815331-e17a3fe9-c866-4fff-bfd9-b4195d96609f.png)
+![image](https://user-images.githubusercontent.com/111758436/216808838-04dffd99-b470-4936-8d91-6c15ae2cb4a2.png)
