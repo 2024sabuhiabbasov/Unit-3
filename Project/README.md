@@ -1,4 +1,4 @@
-# Unit 2: A Distributed Weather Station for ISAK
+# Unit 2: Ski/snowboard rental
 
 # Criteria A: Planning
 
