@@ -1,4 +1,4 @@
-# Unit 2: Ski/snowboard rental
+# Unit 3: Ski/snowboard rental
 
 # Criteria A: Planning
 
