@@ -1,4 +1,3 @@
-```.py
 emp_1 = ["Shahru Shabanov", "shabanovshahru.de@gmail.com", "shop assistant", 22, 8400]
 emp_2 = ["Lison Hebert", "2024.lison.fenghan.hebert@uwcisak.jp", "drop shipper", 17, 20000]
 emp_3 = ["Ibrahim Mammadov", "imammadov@college.harvard.edu", "web developer", 21, 45000]
@@ -14,4 +13,3 @@ def greet(emp: list) -> str:
 
 for i in (0, 2):
     print(greet(database[i]))
-```
