@@ -1,4 +1,3 @@
-```.py
 CREATE TABLE if not exists Driver(
     id INTEGER PRIMARY KEY,
     name text,
@@ -20,4 +19,3 @@ UPDATE Driver SET name = "bob2" where id = 2;
 
 select SUM(age) from Driver;
 select avg(age) from Driver;
-```
