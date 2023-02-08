@@ -1,4 +1,3 @@
-```.py
 class Employee:
     def __init__(this_employee, username, email, age, salary, role):
         this_employee.name = username
@@ -31,4 +30,3 @@ database = [emp_1, emp_2]
 
 for emp in database:
     print(emp.email_adress())
-```
