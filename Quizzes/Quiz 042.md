@@ -36,35 +36,35 @@ ScreenManager:
 
 <MysteryPageA>
     size: 500,500
-    md_bg_color: "#f6f1d1"
+    md_bg_color: "#3c362a"
 
     MDLabel:
-        text: "Mystery Page A"
+        text: "This is a mystery page A you pressed the button"
         font_style: "H3"
         halign: "center"
-        color: "#373F51"
+        color: "#e8f7ee"
 
         MDRaisedButton:
             text: "Next page"
             on_press: root.parent.current = "MysteryPageB"
             size_hint: .3, .5
-            md_bg_color: "#70a9a1"
+            md_bg_color: "#352208"
 
 <MysteryPageB>
     size: 500,500
-    md_bg_color: "#f6f1d1"
+    md_bg_color: "#e8f7ee"
 
     MDLabel:
-        text: "Mystery Page B"
+        text: "This is a mystery page B you pressed the button"
         font_style: "H3"
         halign: "center"
-        color: "#373F51"
+        color: "#3c362a"
 
         MDRaisedButton:
-            text: "Go back"
+            text: "Previous page"
             on_press: root.parent.current = "MysteryPageA"
             size_hint: .3, .5
-            md_bg_color: "#70a9a1"
+            md_bg_color: "#352208"
 ```
 ### Proof
 ![image](https://github.com/2024sabuhiabbasov/Unit-3/blob/main/Other/quiz_042.gif)
