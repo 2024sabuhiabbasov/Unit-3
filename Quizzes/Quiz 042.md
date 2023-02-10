@@ -67,4 +67,4 @@ ScreenManager:
             md_bg_color: "#352208"
 ```
 ### Proof
-![image](https://github.com/2024sabuhiabbasov/Unit-3/blob/main/Other/quiz_042.gif)
+![image](https://github.com/2024sabuhiabbasov/Unit-3/blob/main/Other/quiz042.gif)
