@@ -1,6 +1,6 @@
 # Quiz 042
 
-![image](https://user-images.githubusercontent.com/111758436/216806960-62075295-7202-4579-841f-d35a624c9e40.png)
+![image](https://user-images.githubusercontent.com/111758436/217976443-8e60d6d5-1098-4c6d-953b-57d344ff57df.png)
 
 ## My codes
 
