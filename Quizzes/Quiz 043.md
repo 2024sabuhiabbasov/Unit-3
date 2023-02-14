@@ -1,6 +1,6 @@
 # Quiz 043
 
-image
+![image](https://user-images.githubusercontent.com/111758436/218710987-4ee1e688-39f3-4656-ae21-14167ef3cd03.png)
 
 ## My codes
 
