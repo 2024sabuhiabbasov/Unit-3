@@ -1,66 +1,73 @@
 # Quiz 040
 
-![image](https://user-images.githubusercontent.com/111758436/216806960-62075295-7202-4579-841f-d35a624c9e40.png)
+![image](https://user-images.githubusercontent.com/111758436/220294831-3082502f-4ba1-4d8b-982f-2f2217d2cebe.png)
 
 ## My codes
 
 ### Python
 ```.py
-# Program for Quiz 039
+# Program for Quiz 041
 
 from kivymd.app import MDApp
-
-
-class theming(MDApp):
+class tictactoe(MDApp):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        self.values = [0,0,0,0,0,0,0,0,0]
+        self.player = "X"
+
+        # "0" means empty
+        # "1" means X
+        # "2" means O
 
     def build(self):
         return
 
-    def change_mode(self):
-        print(self.root.ids.main.md_bg_color)
-        if self.root.ids.main.md_bg_color == [1.0, 1.0, 1.0, 1.0]:
-            self.root.ids.main.md_bg_color = "#000000"
-            self.root.ids.theme_mode.text_color = 1, 1, 1, 1
-            self.root.ids.my_name.text_color = 1, 1, 1, 1
-            self.root.ids.theme_mode.text = "LIGHT"
-            self.root.ids.theme_mode.md_bg_color = "#B7B78A"
+    def button_press(self,button_id):
+        print(button_id)
+        current_player = self.player
+        temp = "self.root.ids.button" + button_id
+        current_button = eval(temp)
+        #current_button.disabled = True
+        if self.values[int(button_id)-1] == 0:
+            current_button.text = current_player
+            if current_player == "X":
+                self.player = "O"
+                current_button.md_bg_color = "#94163a"
+                self.values[int(button_id)-1] = 1
+            else:
+                self.player = "X"
+                current_button.md_bg_color = "black"
+                self.values[int(button_id)-1] = 2
+
+
+        print(self.values)
+
+        win_combs = [(0, 1, 2), (3, 4, 5), (6, 7, 8),
+                                (0, 3, 6), (1, 4, 7), (2, 5, 8),
+                                (0, 4, 8), (2, 4, 6)]
+
+        for indices in win_combs:
+            if all(self.values[i] == self.values[indices[0]] and self.values[i] != 0 for i in indices):
+                print(f"Winner is {current_player}")
+                self.root.ids.label2.text = f"Winner is {current_player}"
+                break
         else:
-            self.root.ids.main.md_bg_color = "#FFFFFF"
-            self.root.ids.theme_mode.text_color = 0, 0, 0, 1
-            self.root.ids.my_name.text_color = 0, 0, 0, 1
-            self.root.ids.theme_mode.text = "DARK"
-            self.root.ids.theme_mode.md_bg_color = "#658864"
+            print("No Winner Yet")
+            self.root.ids.label2.text = f"Current Player: {self.player}"
+
+    def reset(self):
+        self.values = [0,0,0,0,0,0,0,0,0]
+        self.player = "X"
+        for i in range(1,10):
+            temp = "self.root.ids.button" + str(i)
+            current_button = eval(temp)
+            current_button.text = ""
+            current_button.md_bg_color = "#0e576e"
+            #current_button.disabled = False
+        self.root.ids.label2.text = f"Current Player: {self.player}"
 
 
-quiz40 = theming()
-quiz40.run()
-```
-### KivyMD
-```.kv
-# theming.kv
-Screen:
-    size:500,500
-    MDBoxLayout:
-        id: main
-        orientation:"vertical"
-        md_bg_color: "#FFFFFF"
-        MDLabel:
-            id:my_name
-            text: "Sabuhi Abbasov"
-            halign: "center"
-            font_style: "H2"
-            theme_text_color: "Custom"
-            text_color: 0, 0, 0, 1
-            pos_hint: {"center_x": .5, "center_y": .5}
-        MDRaisedButton:
-            id: theme_mode
-            text: "Dark Mode"
-            md_bg_color: "B7B78A"
-            pos_hint: {"center_x": 0.05, "center_y": 0.1}
-            on_release: app.change_mode()
+result = tictactoe()
+result.run()
 ```
 ### Proof
-![image](https://user-images.githubusercontent.com/111758436/216807664-8aa3978e-b6a9-4eae-9b59-3bf98f1967de.png)
-![image](https://user-images.githubusercontent.com/111758436/216807669-66aaf755-dc94-4438-b574-ac8881015ed1.png)
