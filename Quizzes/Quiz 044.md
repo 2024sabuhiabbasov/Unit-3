@@ -36,3 +36,5 @@ select * from ITEM where owner=4 or owner=18
 <p align='center'>
 <i>Question 5 and 6</i>
 </p>
+
+![image](https://user-images.githubusercontent.com/111758436/220589865-ef990356-0438-421a-9764-9580c8bdf5a5.png)
