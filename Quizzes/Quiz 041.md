@@ -1,4 +1,4 @@
-# Quiz 040
+# Quiz 041
 
 ![image](https://user-images.githubusercontent.com/111758436/220294831-3082502f-4ba1-4d8b-982f-2f2217d2cebe.png)
 
@@ -70,4 +70,123 @@ class tictactoe(MDApp):
 result = tictactoe()
 result.run()
 ```
+### KV
+```.kv
+MDScreen:
+    id : screen
+    size:500,500
+    md_bg_color: "black"
+    MDBoxLayout:
+        id: main_box
+        size_hint: .8, .8
+        orientation: 'vertical'
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        MDBoxLayout:
+            id: box1
+            size_hint: 1, .2
+            orientation: 'vertical'
+            MDLabel:
+                id: label1
+                text: 'Tic Tac Toe by Sabu'
+                halign: 'center'
+                font_style: 'H4'
+                color: "white"
+            MDLabel:
+                id: label2
+                text: "Current Player:" + app.player
+                halign: 'center'
+                font_size: 24
+                color: "white"
+
+        MDBoxLayout:
+            id: box2
+            size_hint: 1, .8
+            orientation: 'vertical'
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            MDBoxLayout:
+                id: layerone
+                size_hint:1,.33
+                orientation:"horizontal"
+                MDRaisedButton:
+                    id: button1
+                    text: ""
+                    size_hint: .33, 1
+                    md_bg_color: "#0e576e"
+                    on_release: app.button_press("1")
+                MDRaisedButton:
+                    id: button2
+                    text: ""
+                    size_hint: .33, 1
+                    md_bg_color: "#0e576e"
+                    on_release: app.button_press("2")
+                MDRaisedButton:
+                    id: button3
+                    text: ""
+                    size_hint: .33, 1
+                    md_bg_color: "#0e576e"
+                    on_release: app.button_press("3")
+            MDBoxLayout:
+                id: layertwo
+                size_hint:1,.33
+                orientation:"horizontal"
+                MDRaisedButton:
+                    id: button4
+                    text: ""
+                    size_hint: .33, 1
+                    md_bg_color: "#0e576e"
+                    on_release: app.button_press("4")
+                MDRaisedButton:
+                    id: button5
+                    text: ""
+                    size_hint: .33, 1
+                    md_bg_color: "#0e576e"
+                    on_release: app.button_press("5")
+                MDRaisedButton:
+                    id: button6
+                    text: ""
+                    size_hint: .33, 1
+                    md_bg_color: "#0e576e"
+                    on_release: app.button_press("6")
+
+            MDBoxLayout:
+                id: layerthree
+                size_hint:1,.33
+                orientation:"horizontal"
+                MDRaisedButton:
+                    id: button7
+                    text: ""
+                    size_hint: .33, 1
+                    md_bg_color: "#0e576e"
+                    on_release: app.button_press("7")
+                MDRaisedButton:
+                    id: button8
+                    text: ""
+                    size_hint: .33, 1
+                    md_bg_color: "#0e576e"
+                    on_release: app.button_press("8")
+                MDRaisedButton:
+                    id: button9
+                    text: ""
+                    size_hint: .33, 1
+                    md_bg_color: "#0e576e"
+                    on_release: app.button_press("9")
+
+        MDLabel:
+            text: ""
+            size_hint: 1, .07
+
+        MDBoxLayout:
+            id: resetbox
+            size_hint: 1, .09
+            orientation: 'vertical'
+            MDRectangleFlatButton:
+                id: resetbutton
+                text: "Reset"
+                size_hint: .1, .1
+                line_color: "#0e576e"
+                text_color: "#0e576e"
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                on_release: app.reset()
+```
 ### Proof
+![quiz041](https://user-images.githubusercontent.com/111758436/220589026-26e2fc06-29c2-476a-a924-d6739e9e1068.gif)
