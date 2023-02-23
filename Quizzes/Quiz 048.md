@@ -1,6 +1,6 @@
 # Quiz 048
 
-s
+Statement
 
 ## My codes
 ### Python
