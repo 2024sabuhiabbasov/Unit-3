@@ -10,6 +10,10 @@ Statement
 from secure_password import check_password
 import sqlite3
 
+end_code = "\033[00m"
+red = "\33[0;31m"
+green = "\33[0;32m"
+
 class database_worker:
     def __init__(self, name):
         self.connection = sqlite3.connect(name)
@@ -37,9 +41,9 @@ for row in result:
     checker = check_password(hashed_password=hash, user_password=string_hash)
 
     if checker:
-        print(f"ID = {sender_id}: Signature matches")
+        print(f"{green}Tx(id={id}) Signature matches{end_code}")
     else:
-        print(f"ID = {sender_id}: Signature doesn't match")
+        print(f"{red}Tx(id={id}) Error signature{end_code}")
 ```
 ### Proof
-![image](https://user-images.githubusercontent.com/111758436/220819114-40139950-bb7e-4e09-bab5-546b37e631c7.png)
+![image](https://user-images.githubusercontent.com/111758436/220821637-2d681f6f-b681-43f9-b352-c576b07b2903.png)
