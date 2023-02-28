@@ -1,6 +1,6 @@
 # Quiz 049
 
-statement
+![image](https://user-images.githubusercontent.com/111758436/221758659-5c1aeddd-0890-4496-b056-9ba22d5a31d5.png)
 
 ## My codes
 ### Python
@@ -43,7 +43,7 @@ for row in result:
     else:
         pass
 
-print(total)
+print(f"The total amount of bitcoins transferred by valid transactions{total}")
 ```
 ### Proof
-![image](https://user-images.githubusercontent.com/111758436/221083415-a3bb6288-5411-4b45-8b1f-d692b451a12f.png)
+![image](https://user-images.githubusercontent.com/111758436/221759199-08de0d3b-24ed-4890-bb72-10c9098854fd.png)
