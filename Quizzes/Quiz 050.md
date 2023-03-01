@@ -1,6 +1,6 @@
 # Quiz 050
 
-statement
+![image](https://user-images.githubusercontent.com/111758436/222195839-5e9fc9b8-301b-4653-bd20-104962e46ed7.png)
 
 ## My codes
 ### Python
