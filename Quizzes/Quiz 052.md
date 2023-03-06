@@ -1,6 +1,6 @@
 # Quiz 052
 
-statement
+![image](https://user-images.githubusercontent.com/111758436/223024015-c9bc7d3c-f0fb-4627-b577-bdc07f51ab05.png)
 
 ## Codes
 ### My solution
